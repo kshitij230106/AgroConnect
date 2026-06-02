@@ -1,0 +1,63 @@
+version: "3.1"
+
+rules:
+
+- rule: Greet user
+  steps:
+    - intent: greet
+    - action: action_greet
+
+- rule: Say goodbye
+  steps:
+    - intent: goodbye
+    - action: action_goodbye
+
+- rule: Say thanks
+  steps:
+    - intent: thanks
+    - action: action_thanks
+
+- rule: Help user
+  steps:
+    - intent: help
+    - action: action_help
+
+- rule: How are you
+  steps:
+    - intent: ask_how_are_you
+    - action: action_how_are_you
+
+- rule: Handle district input
+  steps:
+    - intent: provide_district
+    - action: action_handle_district
+
+- rule: NO at district - user denies district
+  steps:
+    - intent: deny_district
+    - action: action_deny_district
+
+- rule: Handle product input
+  steps:
+    - intent: provide_product
+    - action: action_handle_product
+
+- rule: NO at product - user denies product
+  steps:
+    - intent: deny_product
+    - action: action_deny_product
+
+- rule: Change district
+  steps:
+    - intent: change_district
+    - action: action_restart_conversation
+
+- rule: Smart search - district and product together
+  steps:
+    - intent: smart_search
+    - action: action_smart_search
+
+- rule: Default fallback
+  steps:
+    - intent: nlu_fallback
+    - action: action_handle_fallback

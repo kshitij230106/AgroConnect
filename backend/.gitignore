@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual Environments
+venv/
+rasa_env/
+
+# Rasa
+.rasa/
+models/*.tar.gz
+
+# Databases
+*.db
+
+# Frontend
+node_modules/
+
+# Environment variables
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log

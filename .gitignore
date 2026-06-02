@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environment
+rasa_env/
+venv/
+.env
+
+# Rasa
+# Rasa
+.rasa/
+models/*.tar.gz
+models/
+
+# Node.js
+node_modules/
+
+# Build files
+build/
+dist/
+
+# OS files
+.DS_Store
+Thumbs.db

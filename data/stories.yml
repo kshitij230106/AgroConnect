@@ -1,0 +1,92 @@
+version: "3.1"
+
+stories:
+
+- story: happy path greet to retailers
+  steps:
+    - intent: greet
+    - action: action_greet
+    - intent: provide_district
+    - action: action_handle_district
+    - intent: provide_product
+    - action: action_handle_product
+
+- story: direct district then product
+  steps:
+    - intent: provide_district
+    - action: action_handle_district
+    - intent: provide_product
+    - action: action_handle_product
+
+- story: smart search direct
+  steps:
+    - intent: smart_search
+    - action: action_smart_search
+
+- story: NO at district step
+  steps:
+    - intent: greet
+    - action: action_greet
+    - intent: deny_district
+    - action: action_deny_district
+
+- story: NO at product step then change district
+  steps:
+    - intent: provide_district
+    - action: action_handle_district
+    - intent: deny_product
+    - action: action_deny_product
+    - intent: provide_district
+    - action: action_handle_district
+    - intent: provide_product
+    - action: action_handle_product
+
+- story: fallback at district then retry
+  steps:
+    - intent: greet
+    - action: action_greet
+    - intent: nlu_fallback
+    - action: action_handle_fallback
+    - intent: provide_district
+    - action: action_handle_district
+    - intent: provide_product
+    - action: action_handle_product
+
+- story: change district mid conversation
+  steps:
+    - intent: provide_district
+    - action: action_handle_district
+    - intent: change_district
+    - action: action_restart_conversation
+    - intent: provide_district
+    - action: action_handle_district
+    - intent: provide_product
+    - action: action_handle_product
+
+- story: help then search
+  steps:
+    - intent: help
+    - action: action_help
+    - intent: provide_district
+    - action: action_handle_district
+    - intent: provide_product
+    - action: action_handle_product
+
+- story: thanks then exit
+  steps:
+    - intent: thanks
+    - action: action_thanks
+
+- story: how are you then search
+  steps:
+    - intent: ask_how_are_you
+    - action: action_how_are_you
+    - intent: provide_district
+    - action: action_handle_district
+    - intent: provide_product
+    - action: action_handle_product
+
+- story: goodbye
+  steps:
+    - intent: goodbye
+    - action: action_goodbye

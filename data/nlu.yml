@@ -1,0 +1,326 @@
+version: "3.1"
+
+nlu:
+
+- intent: greet
+  examples: |
+    - hi
+    - hello
+    - hey
+    - good morning
+    - good evening
+    - howdy
+    - hi there
+    - hello there
+    - hii
+    - hey there
+    - नमस्ते
+    - नमस्कार
+    - हेलो
+    - हाय
+    - सुप्रभात
+    - शुभ संध्या
+    - हाय वहाँ
+    - राम राम
+    - जय श्री राम
+    - शुभ प्रभात
+    - வணக்கம்
+    - ஹலோ
+    - ஹாய்
+    - காலை வணக்கம்
+
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you
+    - see you later
+    - take care
+    - quit
+    - exit
+    - bye bye
+    - अलविदा
+    - बाय
+    - फिर मिलेंगे
+    - ठीक है बाय
+    - बाय बाय
+    - விடை
+    - பிரியாவிடை
+    - சரி bye
+    - நன்றி bye
+
+- intent: thanks
+  examples: |
+    - thanks
+    - thank you
+    - thank you so much
+    - thanks a lot
+    - great thanks
+    - helpful thanks
+    - ty
+    - thx
+    - धन्यवाद
+    - बहुत धन्यवाद
+    - शुक्रिया
+    - बहुत शुक्रिया
+    - நன்றி
+    - மிக்க நன்றி
+    - நன்றி மிகவும்
+
+- intent: help
+  examples: |
+    - help
+    - what can you do
+    - how does this work
+    - what should i type
+    - how to use this
+    - guide me
+    - assist me
+    - what do i do
+    - मदद
+    - मदद करो
+    - मुझे मदद चाहिए
+    - कैसे करें
+    - क्या करूँ
+    - समझाओ
+    - உதவி
+    - எப்படி பயன்படுத்துவது
+    - உதவி செய்
+
+- intent: ask_how_are_you
+  examples: |
+    - how are you
+    - how are you doing
+    - how do you do
+    - are you okay
+    - you okay
+    - how is it going
+    - how are things
+    - hows it going
+    - how are you bot
+    - you good
+    - how r you
+    - how are u
+    - are you fine
+    - how are you today
+    - कैसे हो
+    - कैसे हैं आप
+    - आप कैसे हैं
+    - ठीक हो
+    - सब ठीक है
+    - क्या हाल है
+    - நீங்கள் எப்படி இருக்கிறீர்கள்
+    - எப்படி இருக்கீங்க
+    - நலமா
+
+- intent: provide_district
+  examples: |
+    - tirupati
+    - guntur
+    - eluru
+    - anakapalli
+    - kurnool
+    - i am from tirupati
+    - my district is guntur
+    - searching in eluru
+    - show retailers in kurnool
+    - i need products in anakapalli
+    - tirupati district
+    - guntur district
+    - from tirupati
+    - in guntur
+    - eluru district
+    - kurnool district
+    - anakapalli district
+    - yes tirupati
+    - yes guntur
+    - yes eluru
+    - तिरुपति
+    - गुंटूर
+    - एलुरु
+    - अनाकापल्ली
+    - कुरनूल
+    - मैं तिरुपति से हूँ
+    - मेरा जिला तिरुपति है
+    - मैं गुंटूर से हूँ
+    - मेरा जिला गुंटूर है
+    - मैं कुरनूल से हूँ
+    - तिरुपति जिला
+    - गुंटूर जिला
+    - कुरनूल जिला
+    - एलुरु जिला
+    - अनाकापल्ली जिला
+
+- intent: deny_district
+  examples: |
+    - no
+    - nope
+    - not now
+    - cancel
+    - i do not want
+    - never mind
+    - nah
+    - no thanks
+    - do not want to search
+    - stop
+    - no district
+    - exit now
+    - नहीं
+    - नहीं चाहिए
+    - रुको
+    - बंद करो
+    - இல்லை
+    - வேண்டாம்
+    - நிறுத்து
+
+- intent: provide_product
+  examples: |
+    - urea
+    - dap
+    - sulphate
+    - amm sulphate
+    - ammonium sulphate
+    - 15-15-15-9
+    - 20-20-0-13
+    - i need urea
+    - show me dap
+    - looking for sulphate
+    - give me urea
+    - need dap
+    - want sulphate
+    - search urea
+    - find dap
+    - show urea
+    - get dap
+    - urea please
+    - dap please
+    - yes urea
+    - yes dap
+    - yes sulphate
+    - fertilizer
+    - any fertilizer
+    - some fertilizer
+    - npk
+    - zinc
+    - potash
+    - calcium
+    - boron
+    - यूरिया
+    - डीएपी
+    - सल्फेट
+    - अमोनियम सल्फेट
+    - सलफेट
+    - खाद
+    - उर्वरक
+    - मुझे यूरिया चाहिए
+    - यूरिया चाहिए
+    - मुझे डीएपी चाहिए
+    - डीएपी चाहिए
+    - मुझे सल्फेट चाहिए
+    - सल्फेट चाहिए
+    - मुझे अमोनियम सल्फेट चाहिए
+    - अमोनियम सल्फेट चाहिए
+    - यूरिया कहाँ मिलेगा
+    - डीएपी कहाँ मिलेगा
+    - खाद कहाँ मिलेगी
+    - मुझे खाद चाहिए
+    - खाद चाहिए
+    - यूरिया की दुकान बताओ
+    - डीएपी की दुकान बताओ
+    - यूरिया खाद चाहिए
+    - डीएपी खाद चाहिए
+    - मुझे 15-15-15-9 चाहिए
+    - 15-15-15-9 चाहिए
+    - मुझे 20-20-0-13 चाहिए
+    - 20-20-0-13 चाहिए
+    - யூரியா
+    - உரம்
+    - டிஏபி
+
+- intent: deny_product
+  examples: |
+    - no product
+    - not looking for product
+    - no i do not need product
+    - skip product
+    - go back
+    - change district
+    - different district
+    - search another district
+    - i want to change district
+    - back to district
+    - no i want to go back
+    - cancel product search
+    - वापस जाओ
+    - जिला बदलो
+    - नहीं उत्पाद
+    - திரும்பு
+    - மாவட்டம் மாற்று
+
+- intent: change_district
+  examples: |
+    - change district
+    - new search
+    - start again
+    - different district
+    - search another district
+    - i want to change district
+    - back to district
+    - select new district
+    - redo
+    - change
+    - जिला बदलें
+    - नई खोज
+    - फिर से शुरू करें
+    - மாவட்டம் மாற்று
+    - புதிய தேடல்
+
+- intent: smart_search
+  examples: |
+    - तिरुपति में यूरिया चाहिए
+    - मुझे तिरुपति में यूरिया चाहिए
+    - तिरुपति में डीएपी चाहिए
+    - गुंटूर में डीएपी चाहिए
+    - कुरनूल में सल्फेट चाहिए
+    - एलुरु में यूरिया चाहिए
+    - अनाकापल्ली में डीएपी चाहिए
+    - यूरिया कहाँ मिलेगा
+    - तिरुपति में यूरिया कहाँ मिलेगा
+    - डीएपी कहाँ मिलेगा
+    - मुझे डीएपी चाहिए
+    - मुझे यूरिया चाहिए
+    - मेरे जिले तिरुपति में यूरिया चाहिए
+    - तिरुपति में उर्वरक विक्रेता दिखाओ
+    - यूरिया बेचने वाले रिटेलर बताओ
+    - डीएपी बेचने वाले विक्रेता बताओ
+    - तिरुपति में डीएपी के दुकानदार बताओ
+    - तिरुपति में खाद चाहिए
+    - यूरिया की दुकान बताओ
+    - डीएपी की दुकान बताओ
+    - यूरिया उपलब्ध है क्या
+    - डीएपी उपलब्ध है क्या
+    - मुझे खाद खरीदनी है
+    - खाद कहाँ मिलेगी
+    - guntur mein urea chahiye
+    - tirupati mein dap chahiye
+
+- synonym: sulphate
+  examples: |
+    - सल्फेट
+    - सलफेट
+    - ammonium sulphate
+    - ammonium sulfate
+    - अमोनियम सल्फेट
+    - अमोनियम सलफेट
+    - amm sulphate
+
+- synonym: urea
+  examples: |
+    - यूरिया
+    - युरिया
+    - neem coated urea
+
+- synonym: dap
+  examples: |
+    - डीएपी
+    - डी ए पी

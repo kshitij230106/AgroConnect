@@ -1,0 +1,51 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - thanks
+  - help
+  - provide_district
+  - deny_district
+  - provide_product
+  - deny_product
+  - change_district
+  - ask_how_are_you
+  - smart_search
+  - nlu_fallback
+
+entities:
+  - district
+  - product
+
+slots:
+  district:
+    type: text
+    mappings:
+      - type: custom
+  product:
+    type: text
+    mappings:
+      - type: custom
+  language:
+    type: text
+    mappings:
+      - type: custom
+
+actions:
+  - action_handle_district
+  - action_handle_product
+  - action_handle_fallback
+  - action_restart_conversation
+  - action_greet
+  - action_goodbye
+  - action_thanks
+  - action_help
+  - action_deny_district
+  - action_deny_product
+  - action_how_are_you
+  - action_smart_search
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
