@@ -24,10 +24,6 @@ nlu:
     - राम राम
     - जय श्री राम
     - शुभ प्रभात
-    - வணக்கம்
-    - ஹலோ
-    - ஹாய்
-    - காலை வணக்கம்
 
 - intent: goodbye
   examples: |
@@ -44,10 +40,6 @@ nlu:
     - फिर मिलेंगे
     - ठीक है बाय
     - बाय बाय
-    - விடை
-    - பிரியாவிடை
-    - சரி bye
-    - நன்றி bye
 
 - intent: thanks
   examples: |
@@ -63,9 +55,6 @@ nlu:
     - बहुत धन्यवाद
     - शुक्रिया
     - बहुत शुक्रिया
-    - நன்றி
-    - மிக்க நன்றி
-    - நன்றி மிகவும்
 
 - intent: help
   examples: |
@@ -83,9 +72,6 @@ nlu:
     - कैसे करें
     - क्या करूँ
     - समझाओ
-    - உதவி
-    - எப்படி பயன்படுத்துவது
-    - உதவி செய்
 
 - intent: ask_how_are_you
   examples: |
@@ -109,9 +95,6 @@ nlu:
     - ठीक हो
     - सब ठीक है
     - क्या हाल है
-    - நீங்கள் எப்படி இருக்கிறீர்கள்
-    - எப்படி இருக்கீங்க
-    - நலமா
 
 - intent: provide_district
   examples: |
@@ -120,36 +103,115 @@ nlu:
     - eluru
     - anakapalli
     - kurnool
+    - anantapur
+    - annamayya
+    - bapatla
+    - chittoor
+    - east godavari
+    - konaseema
+    - krishna
+    - nandyal
+    - ntr
+    - palnadu
+    - prakasam
+    - spsr nellore
+    - sri sathya sai
+    - west godavari
     - i am from tirupati
+    - i am from guntur
+    - i am from bapatla
+    - i am from konaseema
+    - i am from krishna
+    - i am from nandyal
+    - i am from ntr
+    - i am from palnadu
+    - i am from prakasam
+    - i am from spsr nellore
+    - i am from sri sathya sai
+    - i am from west godavari
+    - i am from anantapur
+    - i am from annamayya
+    - i am from chittoor
+    - i am from east godavari
     - my district is guntur
+    - my district is bapatla
+    - my district is krishna
     - searching in eluru
+    - searching in konaseema
     - show retailers in kurnool
+    - show retailers in nandyal
     - i need products in anakapalli
+    - i need products in prakasam
     - tirupati district
     - guntur district
-    - from tirupati
-    - in guntur
-    - eluru district
-    - kurnool district
-    - anakapalli district
-    - yes tirupati
-    - yes guntur
-    - yes eluru
+    - bapatla district
+    - konaseema district
+    - krishna district
+    - nandyal district
+    - ntr district
+    - palnadu district
+    - prakasam district
+    - spsr nellore district
+    - sri sathya sai district
+    - west godavari district
+    - anantapur district
+    - annamayya district
+    - chittoor district
+    - east godavari district
     - तिरुपति
     - गुंटूर
     - एलुरु
     - अनाकापल्ली
     - कुरनूल
+    - अनंतपुर
+    - अन्नमय्या
+    - बापटला
+    - चित्तूर
+    - पूर्व गोदावरी
+    - कोनसीमा
+    - कृष्णा
+    - नंद्याल
+    - एनटीआर
+    - पालनाडु
+    - प्रकाशम
+    - एसपीएसआर नेल्लोर
+    - श्री सत्य साई
+    - पश्चिम गोदावरी
     - मैं तिरुपति से हूँ
-    - मेरा जिला तिरुपति है
     - मैं गुंटूर से हूँ
+    - मैं बापटला से हूँ
+    - मैं कोनसीमा से हूँ
+    - मैं कृष्णा से हूँ
+    - मैं नंद्याल से हूँ
+    - मैं एनटीआर से हूँ
+    - मैं पालनाडु से हूँ
+    - मैं प्रकाशम से हूँ
+    - मैं पश्चिम गोदावरी से हूँ
+    - मैं अनंतपुर से हूँ
+    - मैं चित्तूर से हूँ
+    - मेरा जिला तिरुपति है
     - मेरा जिला गुंटूर है
-    - मैं कुरनूल से हूँ
+    - मेरा जिला बापटला है
+    - मेरा जिला कृष्णा है
     - तिरुपति जिला
     - गुंटूर जिला
     - कुरनूल जिला
     - एलुरु जिला
     - अनाकापल्ली जिला
+    - बापटला जिला
+    - कोनसीमा जिला
+    - कृष्णा जिला
+    - नंद्याल जिला
+    - एनटीआर जिला
+    - पालनाडु जिला
+    - प्रकाशम जिला
+    - एसपीएसआर नेल्लोर जिला
+    - श्री सत्य साई जिला
+    - पश्चिम गोदावरी जिला
+    - अनंतपुर जिला
+    - अन्नमय्या जिला
+    - चित्तूर जिला
+    - पूर्व गोदावरी जिला
 
 - intent: deny_district
   examples: |
@@ -169,9 +231,6 @@ nlu:
     - नहीं चाहिए
     - रुको
     - बंद करो
-    - இல்லை
-    - வேண்டாம்
-    - நிறுத்து
 
 - intent: provide_product
   examples: |
@@ -233,9 +292,6 @@ nlu:
     - 15-15-15-9 चाहिए
     - मुझे 20-20-0-13 चाहिए
     - 20-20-0-13 चाहिए
-    - யூரியா
-    - உரம்
-    - டிஏபி
 
 - intent: deny_product
   examples: |
@@ -254,8 +310,6 @@ nlu:
     - वापस जाओ
     - जिला बदलो
     - नहीं उत्पाद
-    - திரும்பு
-    - மாவட்டம் மாற்று
 
 - intent: change_district
   examples: |
@@ -272,8 +326,6 @@ nlu:
     - जिला बदलें
     - नई खोज
     - फिर से शुरू करें
-    - மாவட்டம் மாற்று
-    - புதிய தேடல்
 
 - intent: smart_search
   examples: |
@@ -284,12 +336,16 @@ nlu:
     - कुरनूल में सल्फेट चाहिए
     - एलुरु में यूरिया चाहिए
     - अनाकापल्ली में डीएपी चाहिए
+    - बापटला में यूरिया चाहिए
+    - कोनसीमा में डीएपी चाहिए
+    - कृष्णा में सल्फेट चाहिए
+    - नंद्याल में यूरिया चाहिए
+    - पश्चिम गोदावरी में यूरिया चाहिए
     - यूरिया कहाँ मिलेगा
     - तिरुपति में यूरिया कहाँ मिलेगा
     - डीएपी कहाँ मिलेगा
     - मुझे डीएपी चाहिए
     - मुझे यूरिया चाहिए
-    - मेरे जिले तिरुपति में यूरिया चाहिए
     - तिरुपति में उर्वरक विक्रेता दिखाओ
     - यूरिया बेचने वाले रिटेलर बताओ
     - डीएपी बेचने वाले विक्रेता बताओ
@@ -297,12 +353,12 @@ nlu:
     - तिरुपति में खाद चाहिए
     - यूरिया की दुकान बताओ
     - डीएपी की दुकान बताओ
-    - यूरिया उपलब्ध है क्या
-    - डीएपी उपलब्ध है क्या
-    - मुझे खाद खरीदनी है
     - खाद कहाँ मिलेगी
+    - मुझे खाद खरीदनी है
     - guntur mein urea chahiye
     - tirupati mein dap chahiye
+    - bapatla mein urea chahiye
+    - krishna mein dap chahiye
 
 - synonym: sulphate
   examples: |

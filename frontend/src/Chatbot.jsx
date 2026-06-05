@@ -2,77 +2,131 @@ import { useState, useRef, useEffect } from "react";
 import "./Chatbot.css";
 
 const LANG_DATA = {
-  en: {welcome: (name) =>
-   `Hello ${name}! Welcome to AgroConnect.\n\nWhich district are you from?\n\nSelect a district below or type its name.\n\nOr say NO to exit.`,
-    placeholder: "Type district, product, yes or no...",
-    districts: "Districts",
+  en: {
+    detecting: "📍 Detecting your location...",
+    locationFound: (location) =>
+      `📍 We detected you are in ${location}.\n\nWhich product are you looking for?\n\nSelect a product below or type its name.\n\n(Showing nearest retailers across Andhra Pradesh)`,
+    locationFailed: "📍 Could not detect your location.\n\nPlease type your district name.",
+    placeholder: "Type product, yes or no...",
+    districtPlaceholder: "Type your district name...",
     products: "Products",
     actions: "Actions",
     logout: "Logout",
     send: "Send",
     noResponse: "No response received. Please try again.",
     noRasa: "Cannot connect to Rasa. Make sure it is running on port 5005.",
-    districtChips: ["Anakapalli","Anantapur","Annamayya","Bapatla","Chittoor","East Godavari","Eluru","Guntur","Konaseema","Krishna","Kurnool","Nandyal","NTR","Palnadu","Prakasam","SPSR Nellore","Sri Sathya Sai","Tirupati","West Godavari"],
     productChips: ["Urea", "DAP", "Sulphate", "15-15-15-9", "20-20-0-13"],
     actionChips: ["Yes", "No", "Change District", "Help", "Bye"],
   },
   hi: {
-    welcome: (name) =>
-  `नमस्ते ${name}! AgroConnect में आपका स्वागत है।\n\nआप किस जिले से हैं?\n\nनीचे दिए गए जिले चुनें या नाम टाइप करें।`,
-    placeholder: "जिला, उत्पाद, हाँ या नहीं टाइप करें...",
-    districts: "जिले",
+    detecting: "📍 आपका स्थान पता किया जा रहा है...",
+    locationFound: (location) =>
+      `📍 हमने पता लगाया कि आप ${location} में हैं।\n\nआप कौन सा उत्पाद ढूंढ रहे हैं?\n\nनीचे से उत्पाद चुनें या नाम टाइप करें।\n\n(आंध्र प्रदेश के नजदीकी विक्रेता दिखाए जाएंगे)`,
+    locationFailed: "📍 आपका स्थान पता नहीं चला।\n\nकृपया अपना जिला नाम टाइप करें।",
+    placeholder: "उत्पाद, हाँ या नहीं टाइप करें...",
+    districtPlaceholder: "अपना जिला नाम टाइप करें...",
     products: "उत्पाद",
     actions: "विकल्प",
     logout: "लॉगआउट",
     send: "भेजें",
     noResponse: "कोई जवाब नहीं मिला। कृपया फिर से कोशिश करें।",
     noRasa: "Rasa से कनेक्ट नहीं हो सका। कृपया सर्वर चालू करें।",
-    districtChips: ["अनाकापल्ली","अनंतपुर","अन्नमय्या","बापटला","चित्तूर","पूर्व गोदावरी","एलुरु","गुंटूर","कोनसीमा","कृष्णा","कुरनूल","नंद्याल","एनटीआर","पालनाडु","प्रकाशम","एसपीएसआर नेल्लोर","श्री सत्य साई","तिरुपति","पश्चिम गोदावरी"],
     productChips: ["यूरिया", "डीएपी", "सल्फेट", "15-15-15-9", "20-20-0-13"],
     actionChips: ["हाँ", "नहीं", "जिला बदलो", "मदद", "अलविदा"],
   },
-  ta: {
-    welcome: (name) =>
-  `வணக்கம் ${name}! AgroConnect-க்கு வரவேற்கிறோம்.\n\nநீங்கள் எந்த மாவட்டத்தில் இருக்கிறீர்கள்?\n\nகீழே உள்ள மாவட்டத்தைத் தேர்ந்தெடுக்கவும் அல்லது பெயரை தட்டச்சு செய்யவும்.`,
-    placeholder: "மாவட்டம், தயாரிப்பு, ஆம் அல்லது இல்லை என தட்டச்சு செய்யுங்கள்...",
-    districts: "மாவட்டங்கள்",
-    products: "தயாரிப்புகள்",
-    actions: "விருப்பங்கள்",
-    logout: "வெளியேறு",
-    send: "அனுப்பு",
-    noResponse: "பதில் இல்லை. மீண்டும் முயற்சிக்கவும்.",
-    noRasa: "Rasa இணைக்க முடியவில்லை. சர்வரை இயக்கவும்.",
-    districtChips: ["அனகாபல்லி","அனந்தபூர்","அன்னமையா","பாபட்லா","சித்தூர்","கிழக்கு கோதாவரி","எலூரு","குண்டூர்","கோனசீமா","கிருஷ்ணா","கர்நூல்","நந்த்யால்","என்டிஆர்","பால்நாடு","பிரகாசம்","எஸ்பிஎஸ்ஆர் நெல்லூர்","ஸ்ரீ சத்ய சாய்","திருப்பதி","மேற்கு கோதாவரி"],
-    productChips: ["யூரியா", "டிஏபி", "சல்பேட்", "15-15-15-9", "20-20-0-13"],
-    actionChips: ["ஆம்", "இல்லை", "மாவட்டம் மாற்று", "உதவி", "விடை"],
-  },
 };
+
+async function getLocationFromGPS(lat, lon) {
+  try {
+    const res = await fetch(
+      `https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lon}&format=json`,
+      { headers: { "Accept-Language": "en" } }
+    );
+    const data = await res.json();
+    const address = data.address || {};
+
+    const location =
+      address.county ||
+      address.state_district ||
+      address.district ||
+      address.city ||
+      address.town ||
+      address.suburb ||
+      address.village ||
+      address.state ||
+      "Unknown Location";
+
+    return location;
+  } catch {
+    return null;
+  }
+}
 
 function Chatbot({ onLogout, farmerName }) {
   const [lang, setLang] = useState(null);
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
+  const [locationStatus, setLocationStatus] = useState("detecting");
+  const [detectedLocation, setDetectedLocation] = useState(null);
+  const [farmerLocation, setFarmerLocation] = useState(null);
   const bottomRef = useRef(null);
 
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
-  const selectLanguage = (selectedLang) => {
-    setLang(selectedLang);
-    const l = LANG_DATA[selectedLang];
-    setMessages([
-      {
-        sender: "bot",
-        text: l.welcome(farmerName),
+  useEffect(() => {
+    if (!lang) return;
+    detectLocation();
+  }, [lang]);
+
+  const detectLocation = () => {
+    const l = LANG_DATA[lang];
+    setLocationStatus("detecting");
+    setMessages([{ sender: "bot", text: l.detecting }]);
+
+    if (!navigator.geolocation) {
+      locationFailed();
+      return;
+    }
+
+    navigator.geolocation.getCurrentPosition(
+      async (position) => {
+        const { latitude, longitude } = position.coords;
+
+        // Save farmer GPS coordinates for tomorrow's distance calculation
+        setFarmerLocation({ lat: latitude, lon: longitude });
+
+        const location = await getLocationFromGPS(latitude, longitude);
+
+        if (location) {
+          setDetectedLocation(location);
+          setLocationStatus("found");
+          const l = LANG_DATA[lang];
+          setMessages([{
+            sender: "bot",
+            text: l.locationFound(location),
+          }]);
+          // Tomorrow — pass lat/lon to Rasa for distance calculation
+          // For now just show product chips
+        } else {
+          locationFailed();
+        }
       },
-    ]);
+      () => locationFailed(),
+      { timeout: 8000 }
+    );
+  };
+
+  const locationFailed = () => {
+    const l = LANG_DATA[lang];
+    setLocationStatus("failed");
+    setMessages([{ sender: "bot", text: l.locationFailed }]);
   };
 
   const sendMessage = async (overrideText) => {
     const userMessage = overrideText !== undefined ? overrideText : input;
-    
     if (!userMessage.trim()) return;
 
     const l = LANG_DATA[lang];
@@ -93,6 +147,10 @@ function Chatbot({ onLogout, farmerName }) {
           body: JSON.stringify({
             sender: farmerName || "user",
             message: userMessage,
+            metadata: {
+              farmer_lat: farmerLocation?.lat || null,
+              farmer_lon: farmerLocation?.lon || null,
+            },
           }),
         }
       );
@@ -141,29 +199,21 @@ function Chatbot({ onLogout, farmerName }) {
             <div className="bubble bot" style={{ textAlign: "center", fontSize: "16px" }}>
               <div>🌐 Select your language</div>
               <div>अपनी भाषा चुनें</div>
-              <div>உங்கள் மொழியை தேர்ந்தெடுங்கள்</div>
             </div>
             <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", justifyContent: "center" }}>
               <button
                 className="chip action"
                 style={{ fontSize: "16px", padding: "12px 24px" }}
-                onClick={() => selectLanguage("en")}
+                onClick={() => setLang("en")}
               >
                 🇬🇧 English
               </button>
               <button
                 className="chip action"
                 style={{ fontSize: "16px", padding: "12px 24px" }}
-                onClick={() => selectLanguage("hi")}
+                onClick={() => setLang("hi")}
               >
                 🇮🇳 हिंदी
-              </button>
-              <button
-                className="chip action"
-                style={{ fontSize: "16px", padding: "12px 24px" }}
-                onClick={() => selectLanguage("ta")}
-              >
-                🇮🇳 தமிழ்
               </button>
             </div>
           </div>
@@ -182,7 +232,11 @@ function Chatbot({ onLogout, farmerName }) {
           <div className="header-left">
             <div className="status-dot" />
             <span className="header-title">AgroConnect</span>
-            <span className="header-sub">Fertilizer Retailer Bot</span>
+            <span className="header-sub">
+              {detectedLocation
+                ? `📍 ${detectedLocation}`
+                : "Fertilizer Retailer Bot"}
+            </span>
           </div>
           <button className="logout-btn" onClick={onLogout}>
             {l.logout}
@@ -198,19 +252,17 @@ function Chatbot({ onLogout, farmerName }) {
                   : (farmerName?.[0] || "U").toUpperCase()}
               </div>
               <div className={"bubble " + msg.sender}>
-  {msg.text.includes("<table") ? (
-    <div
-      className="table-wrapper"
-      dangerouslySetInnerHTML={{ __html: msg.text }}
-    />
-  ) : (
-    msg.text.split("\n").map((line, i) => (
-      <div key={i}>
-        {line || <>&nbsp;</>}
-      </div>
-    ))
-  )}
-</div>
+                {msg.text.includes("<table") ? (
+                  <div
+                    className="table-wrapper"
+                    dangerouslySetInnerHTML={{ __html: msg.text }}
+                  />
+                ) : (
+                  msg.text.split("\n").map((line, i) => (
+                    <div key={i}>{line || <>&nbsp;</>}</div>
+                  ))
+                )}
+              </div>
             </div>
           ))}
 
@@ -226,60 +278,58 @@ function Chatbot({ onLogout, farmerName }) {
           <div ref={bottomRef} />
         </div>
 
-        <div className="quick-chips">
-          <div className="chip-group">
-            <span className="chip-label">{l.districts}</span>
-            {l.districtChips.map((chip) => (
-              <button
-                key={chip}
-                className="chip district"
-                onClick={() => sendMessage(chip)}
-                disabled={loading}
-              >
-                {chip}
-              </button>
-            ))}
+        {locationStatus !== "detecting" && (
+          <div className="quick-chips">
+            {locationStatus === "found" && (
+              <div className="chip-group">
+                <span className="chip-label">{l.products}</span>
+                {l.productChips.map((chip) => (
+                  <button
+                    key={chip}
+                    className="chip product"
+                    onClick={() => sendMessage(chip)}
+                    disabled={loading}
+                  >
+                    {chip}
+                  </button>
+                ))}
+              </div>
+            )}
+            <div className="chip-group">
+              <span className="chip-label">{l.actions}</span>
+              {l.actionChips.map((chip) => (
+                <button
+                  key={chip}
+                  className="chip action"
+                  onClick={() => sendMessage(chip)}
+                  disabled={loading}
+                >
+                  {chip}
+                </button>
+              ))}
+            </div>
           </div>
-          <div className="chip-group">
-            <span className="chip-label">{l.products}</span>
-            {l.productChips.map((chip) => (
-              <button
-                key={chip}
-                className="chip product"
-                onClick={() => sendMessage(chip)}
-                disabled={loading}
-              >
-                {chip}
-              </button>
-            ))}
-          </div>
-          <div className="chip-group">
-            <span className="chip-label">{l.actions}</span>
-            {l.actionChips.map((chip) => (
-              <button
-                key={chip}
-                className="chip action"
-                onClick={() => sendMessage(chip)}
-                disabled={loading}
-              >
-                {chip}
-              </button>
-            ))}
-          </div>
-        </div>
+        )}
 
         <div className="input-area">
           <input
             type="text"
-            placeholder={l.placeholder}
+            placeholder={
+              locationStatus === "failed"
+                ? l.districtPlaceholder
+                : l.placeholder
+            }
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={(e) => {
               if (e.key === "Enter" && !loading) sendMessage();
             }}
-            disabled={loading}
+            disabled={loading || locationStatus === "detecting"}
           />
-          <button onClick={() => sendMessage()} disabled={loading}>
+          <button
+            onClick={() => sendMessage()}
+            disabled={loading || locationStatus === "detecting"}
+          >
             {loading ? "..." : l.send}
           </button>
         </div>
