@@ -98,120 +98,67 @@ nlu:
 
 - intent: provide_district
   examples: |
-    - tirupati
-    - guntur
-    - eluru
-    - anakapalli
-    - kurnool
-    - anantapur
-    - annamayya
-    - bapatla
-    - chittoor
-    - east godavari
-    - konaseema
-    - krishna
-    - nandyal
-    - ntr
-    - palnadu
-    - prakasam
-    - spsr nellore
-    - sri sathya sai
-    - west godavari
-    - i am from tirupati
-    - i am from guntur
-    - i am from bapatla
-    - i am from konaseema
-    - i am from krishna
-    - i am from nandyal
-    - i am from ntr
-    - i am from palnadu
-    - i am from prakasam
-    - i am from spsr nellore
-    - i am from sri sathya sai
-    - i am from west godavari
-    - i am from anantapur
-    - i am from annamayya
-    - i am from chittoor
-    - i am from east godavari
-    - my district is guntur
-    - my district is bapatla
-    - my district is krishna
-    - searching in eluru
-    - searching in konaseema
-    - show retailers in kurnool
-    - show retailers in nandyal
-    - i need products in anakapalli
-    - i need products in prakasam
-    - tirupati district
-    - guntur district
-    - bapatla district
-    - konaseema district
-    - krishna district
-    - nandyal district
-    - ntr district
-    - palnadu district
-    - prakasam district
-    - spsr nellore district
-    - sri sathya sai district
-    - west godavari district
-    - anantapur district
-    - annamayya district
-    - chittoor district
-    - east godavari district
-    - तिरुपति
-    - गुंटूर
-    - एलुरु
-    - अनाकापल्ली
-    - कुरनूल
-    - अनंतपुर
-    - अन्नमय्या
-    - बापटला
-    - चित्तूर
-    - पूर्व गोदावरी
-    - कोनसीमा
-    - कृष्णा
-    - नंद्याल
-    - एनटीआर
-    - पालनाडु
-    - प्रकाशम
-    - एसपीएसआर नेल्लोर
-    - श्री सत्य साई
-    - पश्चिम गोदावरी
-    - मैं तिरुपति से हूँ
-    - मैं गुंटूर से हूँ
-    - मैं बापटला से हूँ
-    - मैं कोनसीमा से हूँ
-    - मैं कृष्णा से हूँ
-    - मैं नंद्याल से हूँ
-    - मैं एनटीआर से हूँ
-    - मैं पालनाडु से हूँ
-    - मैं प्रकाशम से हूँ
-    - मैं पश्चिम गोदावरी से हूँ
-    - मैं अनंतपुर से हूँ
-    - मैं चित्तूर से हूँ
-    - मेरा जिला तिरुपति है
-    - मेरा जिला गुंटूर है
-    - मेरा जिला बापटला है
-    - मेरा जिला कृष्णा है
-    - तिरुपति जिला
-    - गुंटूर जिला
-    - कुरनूल जिला
-    - एलुरु जिला
-    - अनाकापल्ली जिला
-    - बापटला जिला
-    - कोनसीमा जिला
-    - कृष्णा जिला
-    - नंद्याल जिला
-    - एनटीआर जिला
-    - पालनाडु जिला
-    - प्रकाशम जिला
-    - एसपीएसआर नेल्लोर जिला
-    - श्री सत्य साई जिला
-    - पश्चिम गोदावरी जिला
-    - अनंतपुर जिला
-    - अन्नमय्या जिला
-    - चित्तूर जिला
-    - पूर्व गोदावरी जिला
+    - bhadohi
+    - pilibhit
+    - pratapgarh
+    - rae bareli
+    - rampur
+    - saharanpur
+    - sambhal
+    - sant kabeer nagar
+    - shahjahanpur
+    - i am from bhadohi
+    - i am from pilibhit
+    - i am from saharanpur
+    - i am from sambhal
+    - i am from pratapgarh
+    - i am from rae bareli
+    - i am from rampur
+    - i am from sant kabeer nagar
+    - i am from shahjahanpur
+    - my district is bhadohi
+    - my district is saharanpur
+    - searching in pilibhit
+    - show retailers in rampur
+    - bhadohi district
+    - pilibhit district
+    - pratapgarh district
+    - rae bareli district
+    - rampur district
+    - saharanpur district
+    - sambhal district
+    - sant kabeer nagar district
+    - shahjahanpur district
+    - भदोही
+    - पीलीभीत
+    - प्रतापगढ़
+    - रायबरेली
+    - रामपुर
+    - सहारनपुर
+    - संभल
+    - संत कबीर नगर
+    - शाहजहांपुर
+    - मैं भदोही से हूँ
+    - मैं सहारनपुर से हूँ
+    - मैं रामपुर से हूँ
+    - मैं पीलीभीत से हूँ
+    - मैं प्रतापगढ़ से हूँ
+    - मैं रायबरेली से हूँ
+    - मैं संभल से हूँ
+    - मैं संत कबीर नगर से हूँ
+    - मैं शाहजहांपुर से हूँ
+    - भदोही जिला
+    - पीलीभीत जिला
+    - प्रतापगढ़ जिला
+    - रायबरेली जिला
+    - रामपुर जिला
+    - सहारनपुर जिला
+    - संभल जिला
+    - संत कबीर नगर जिला
+    - शाहजहांपुर जिला
+    - मेरा जिला भदोही है
+    - मेरा जिला सहारनपुर है
+    - मेरा जिला रामपुर है
 
 - intent: deny_district
   examples: |
@@ -236,62 +183,52 @@ nlu:
   examples: |
     - urea
     - dap
-    - sulphate
-    - amm sulphate
-    - ammonium sulphate
-    - 15-15-15-9
-    - 20-20-0-13
+    - mop
+    - npks
+    - npk
+    - ssp
+    - fom
     - i need urea
     - show me dap
-    - looking for sulphate
+    - looking for mop
     - give me urea
     - need dap
-    - want sulphate
+    - want ssp
     - search urea
     - find dap
     - show urea
-    - get dap
+    - get mop
     - urea please
     - dap please
     - yes urea
     - yes dap
-    - yes sulphate
+    - yes mop
+    - potash
     - fertilizer
     - any fertilizer
     - some fertilizer
-    - npk
-    - zinc
-    - potash
-    - calcium
-    - boron
     - यूरिया
     - डीएपी
-    - सल्फेट
-    - अमोनियम सल्फेट
-    - सलफेट
+    - एमओपी
+    - एनपीके
+    - एनपीकेएस
+    - एसएसपी
+    - एफओएम
+    - पोटाश
     - खाद
     - उर्वरक
     - मुझे यूरिया चाहिए
     - यूरिया चाहिए
     - मुझे डीएपी चाहिए
     - डीएपी चाहिए
-    - मुझे सल्फेट चाहिए
-    - सल्फेट चाहिए
-    - मुझे अमोनियम सल्फेट चाहिए
-    - अमोनियम सल्फेट चाहिए
+    - मुझे एमओपी चाहिए
+    - एमओपी चाहिए
+    - मुझे एसएसपी चाहिए
+    - एसएसपी चाहिए
     - यूरिया कहाँ मिलेगा
     - डीएपी कहाँ मिलेगा
     - खाद कहाँ मिलेगी
     - मुझे खाद चाहिए
-    - खाद चाहिए
-    - यूरिया की दुकान बताओ
-    - डीएपी की दुकान बताओ
-    - यूरिया खाद चाहिए
-    - डीएपी खाद चाहिए
-    - मुझे 15-15-15-9 चाहिए
-    - 15-15-15-9 चाहिए
-    - मुझे 20-20-0-13 चाहिए
-    - 20-20-0-13 चाहिए
 
 - intent: deny_product
   examples: |
@@ -300,15 +237,8 @@ nlu:
     - no i do not need product
     - skip product
     - go back
-    - change district
-    - different district
-    - search another district
-    - i want to change district
-    - back to district
-    - no i want to go back
     - cancel product search
     - वापस जाओ
-    - जिला बदलो
     - नहीं उत्पाद
 
 - intent: change_district
@@ -326,49 +256,251 @@ nlu:
     - जिला बदलें
     - नई खोज
     - फिर से शुरू करें
+    - जिला बदलो
 
 - intent: smart_search
   examples: |
-    - तिरुपति में यूरिया चाहिए
-    - मुझे तिरुपति में यूरिया चाहिए
-    - तिरुपति में डीएपी चाहिए
-    - गुंटूर में डीएपी चाहिए
-    - कुरनूल में सल्फेट चाहिए
-    - एलुरु में यूरिया चाहिए
-    - अनाकापल्ली में डीएपी चाहिए
-    - बापटला में यूरिया चाहिए
-    - कोनसीमा में डीएपी चाहिए
-    - कृष्णा में सल्फेट चाहिए
-    - नंद्याल में यूरिया चाहिए
-    - पश्चिम गोदावरी में यूरिया चाहिए
+    - saharanpur mein urea chahiye
+    - bhadohi mein dap chahiye
+    - pilibhit mein mop chahiye
+    - rampur mein ssp chahiye
+    - sambhal mein urea chahiye
+    - सहारनपुर में यूरिया चाहिए
+    - भदोही में डीएपी चाहिए
+    - रामपुर में एमओपी चाहिए
+    - संभल में एसएसपी चाहिए
+    - पीलीभीत में यूरिया चाहिए
     - यूरिया कहाँ मिलेगा
-    - तिरुपति में यूरिया कहाँ मिलेगा
     - डीएपी कहाँ मिलेगा
-    - मुझे डीएपी चाहिए
     - मुझे यूरिया चाहिए
-    - तिरुपति में उर्वरक विक्रेता दिखाओ
-    - यूरिया बेचने वाले रिटेलर बताओ
-    - डीएपी बेचने वाले विक्रेता बताओ
-    - तिरुपति में डीएपी के दुकानदार बताओ
-    - तिरुपति में खाद चाहिए
-    - यूरिया की दुकान बताओ
-    - डीएपी की दुकान बताओ
+    - मुझे डीएपी चाहिए
     - खाद कहाँ मिलेगी
     - मुझे खाद खरीदनी है
-    - guntur mein urea chahiye
-    - tirupati mein dap chahiye
-    - bapatla mein urea chahiye
-    - krishna mein dap chahiye
+    - यूरिया बेचने वाले रिटेलर बताओ
+    - डीएपी बेचने वाले विक्रेता बताओ
 
-- synonym: sulphate
+- intent: search_product_by_district
   examples: |
-    - सल्फेट
-    - सलफेट
-    - ammonium sulphate
-    - ammonium sulfate
-    - अमोनियम सल्फेट
-    - अमोनियम सलफेट
-    - amm sulphate
+    - urea in gurgaon
+    - urea in gurgaon district
+    - show dap in karnal
+    - show dap in [karnal](district) district
+    - fertilizer in rohtak
+    - find urea in [bhadohi](district)
+    - where can i get dap in [saharanpur](district)
+    - i want mop in [rampur](district)
+    - npk in [pilibhit](district)
+    - ssp in [sambhal](district)
+    - fom in [pratapgarh](district)
+    - urea in [rae bareli](district)
+    - dap in [sant kabeer nagar](district)
+    - mop in [shahjahanpur](district)
+    - show me urea in [bhadohi](district)
+    - find dap in [saharanpur](district)
+    - get urea in [rampur](district)
+    - looking for dap in [pilibhit](district)
+    - bhadohi urea
+    - saharanpur dap
+    - rampur mop
+    - pilibhit npk
+    - sambhal ssp
+    - भदोही में यूरिया
+    - सहारनपुर में डीएपी
+    - रामपुर में एमओपी
+    - पीलीभीत में एनपीके
+    - संभल में एसएसपी
+    - [bhadohi](district) में यूरिया चाहिए
+    - [saharanpur](district) में डीएपी चाहिए
+    - [rampur](district) में एमओपी चाहिए
+    - यूरिया [bhadohi](district) में
+    - डीएपी [saharanpur](district) में
+
+- intent: search_product_near_me
+  examples: |
+    - urea near me
+    - dap near me
+    - mop near me
+    - npk near me
+    - ssp near me
+    - fom near me
+    - urea nearby
+    - dap nearby
+    - mop nearby
+    - fertilizer near me
+    - fertilizer nearby
+    - find urea near me
+    - find dap near me
+    - find mop near me
+    - find npk near me
+    - find ssp near me
+    - find fom near me
+    - show urea near me
+    - show dap near me
+    - show mop near me
+    - show urea nearby
+    - show dap nearby
+    - i want urea near me
+    - i want dap near me
+    - i want mop near me
+    - i need urea near me
+    - i need dap near me
+    - get urea near me
+    - get dap near me
+    - urea close to me
+    - dap close to me
+    - urea around me
+    - dap around me
+    - fertilizer close to me
+    - fertilizer around me
+    - nearest urea retailer
+    - nearest dap retailer
+    - nearest fertilizer shop
+    - where can i buy urea near me
+    - where can i buy dap near me
+    - where can i buy fertilizer near me
+    - मेरे पास यूरिया
+    - मेरे पास डीएपी
+    - पास में यूरिया
+    - पास में डीएपी
+    - नजदीकी यूरिया
+    - नजदीकी खाद की दुकान
+    - [urea](product) near me
+    - [dap](product) near me
+    - [mop](product) near me
+    - [npks](product) near me
+    - [ssp](product) near me
+    - [fom](product) near me
+    - i want [urea](product) near me
+    - show [dap](product) near me
+    - find [mop](product) near me
+    - [urea](product) nearby
+    - [dap](product) nearby
+    - [urea](product) close to me
+    - [dap](product) around me
+
+- intent: ask_stock
+  examples: |
+    - how much urea is available
+    - show urea stock
+    - check dap stock
+    - is urea available
+    - do you have dap
+    - show fertilizer stock
+    - what fertilizers are available
+    - how much stock is there
+    - urea stock in bhadohi
+    - dap stock in saharanpur
+    - यूरिया उपलब्ध है
+    - डीएपी उपलब्ध है
+    - स्टॉक दिखाओ
+    - कितना स्टॉक है
+    - खाद उपलब्ध है
+
+- intent: find_retailer
+  examples: |
+    - show retailers
+    - find retailers near me
+    - fertilizer shops near me
+    - nearest retailer
+    - retailer in bhadohi
+    - fertilizer dealer in saharanpur
+    - show nearby stores
+    - where can i buy urea
+    - where can i buy dap
+    - रिटेलर दिखाओ
+    - नजदीकी दुकान दिखाओ
+    - खाद की दुकान कहाँ है
+
+- intent: fertilizer_info
+  examples: |
+    - what is urea
+    - what is dap
+    - tell me about urea
+    - tell me about dap
+    - what is npk
+    - what is mop
+    - explain urea
+    - explain dap
+    - यूरिया क्या है
+    - डीएपी क्या है
+    - एनपीके क्या है
+
+- intent: fertilizer_recommendation
+  examples: |
+    - which fertilizer is good for wheat
+    - fertilizer for rice
+    - what should i use for sugarcane
+    - recommend fertilizer
+    - best fertilizer for paddy
+    - गेहूं के लिए कौन सी खाद
+    - धान के लिए कौन सी खाद
+    - खाद की सिफारिश करो
+
+- intent: timeout_issue
+  examples: |
+    - read timed out
+    - session timeout
+    - session timeout please login again
+    - request timed out
+    - authentication service timed out
+
+- intent: otp_issue
+  examples: |
+    - invalid otp
+    - otp entered is wrong
+    - otp flooding error
+    - exceeded maximum otp generation limit
+    - otp verification failed
+
+- intent: dealer_issue
+  examples: |
+    - dealer not registered for device
+    - invalid dealer id
+    - invalid dealer or pin
+    - dealer registration failed
+    - dealer not found
+
+- intent: biometric_issue
+  examples: |
+    - biometric data did not match
+    - fingerprint mismatch
+    - thumb impression failed
+    - uid authentication failed
+    - biometrics locked
+
+- intent: aadhaar_issue
+  examples: |
+    - please register with primary aadhaar
+    - aadhaar suspended
+    - aadhaar deactivated
+    - aadhaar not linked
+    - aadhaar registration failed
+
+- intent: transaction_issue
+  examples: |
+    - duplicate transaction reference
+    - transaction failed
+    - transaction already processed
+    - invalid transaction
+    - payment transaction error
+
+- intent: price_issue
+  examples: |
+    - price mrp must be same
+    - mrp mismatch
+    - invalid mrp
+    - fertilizer price mismatch
+    - wrong mrp entered
+
+- intent: stock_issue
+  examples: |
+    - insufficient stock
+    - recpt qty exceeds sale qty
+    - purchased qty more than available limit
+    - stock not available
+    - quantity exceeds available stock
+
+# ── Synonyms ──────────────────────────────────────────────────────────────────
 
 - synonym: urea
   examples: |

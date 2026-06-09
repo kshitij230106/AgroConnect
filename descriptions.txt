@@ -1,0 +1,257 @@
+Invalid Dealer Id
+Device not registered with iFMS. Please contact fertilizer company
+INVALID DEALER OR PIN
+RECPT QTY EXCEEDS SALE QTY
+Read timed out
+INVALID INTERFACE TYPE
+ERROR: Please Check DD Number You Entered
+Biometric data did not match.
+Exceeded Maximum OTP generation Limit. Try after 5 Mins
+Session Timeout.Please Login Again
+INVALID REQUEST. KINDLY CHECK REQUEST.
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX5335
+INVALID_OTP. OTP ENTERED IS WRONG
+You Have Been Logged Into Another Device.Your Session From This Device Is Expired.
+Partial Acknowlegment Not Allowed
+Error! Biometric Device did not send correct PID Data
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX8603
+UID_AUTHENTICATION_FAILED
+org.hibernate.exception.ConstraintViolationException: could not execute statement
+Request expired Pid->ts value is older than N hours where N is a configured threshold in authentication server).
+ALREADY ACKNOWLEDGED
+The attribute 'ci' of 'skey' is not valid
+You have exhausted the limit of varifying otp.Kindly generate another pin and try once again
+You have exhausted the limit of getting updated pin on your mobile
+3
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX8178
+Exceeded Maximum OTP generation Limit. Try after 2 Mins
+ERROR: LOCK PERIOD EXCEEDED
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX4791
+Owner Name not accpted because fuzzy matching result is 70.2% i.e.., less than threshold 75.0%_x000D_
+SHIVAKUMAR K M : K M SHIVASHANKAR
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX2520
+NEW MOBILE NUMBER AND OLD MOBILE NUMBER SHOULD NOT MATCH
+Invalid value in the bs attribute of Bio element within Pid.
+Exceeded Maximum OTP generation Limit. Try after 13 Mins
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX0827
+Exceeded Maximum OTP generation Limit. Try after 4 Mins
+Exceeded Maximum OTP generation Limit. Try after 3 Mins
+Exceeded Maximum OTP generation Limit. Try after 1 Mins
+DEALER NOT REGISTERED FOR DEVICE
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX0345
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX4317
+Invalid mc code under Meta tag.
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX9364
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX9345
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX8775
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX8665
+INVALID MAC ADDRESS
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX3701
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX8237
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX7977
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX6218
+Exceeded Maximum OTP generation Limit. Try after 10 Mins
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX0552
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX7484
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX3438
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX7231
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX9295
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX0432
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX7100
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX5420
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX1935
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX0132
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX4727
+Technical error that are internal to authentication server.
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX3132
+Owner Name not accpted because fuzzy matching result is 54.6% i.e.., less than threshold 75.0%_x000D_
+VISHAL KUMAR : AZAD KUMAR YADAV
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX9490
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX5275
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX4257
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX6913
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX5446
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX9123
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX9118
+Txn Already Reversed
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX9125
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX0492
+Aadhaar suspended (Aadhaar is not in authenticatable status).(Your Aadhaar is suspended. Please approach nearest UIDAI Regional Office with valid POI Document.)
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX4684
+Oops! failed to log or proceed for duplicate transaction reference. Please try afresh.
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX6945
+Biometrics locked by Aadhaar number holder.
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX4291
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX4430
+For input string: "K-517"
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX2783
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX1225
+Exceeded Maximum OTP generation Limit. Try after 11 Mins
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX4456
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX5327
+rdsVer is invalid and not part of certification registry.
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX5775
+Exceeded Maximum OTP generation Limit. Try after 15 Mins
+The attribute 'uid' of tag 'auth' is not a valid aadhaar number
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX3358
+Owner Name not accpted because fuzzy matching result is 73.0% i.e.., less than threshold 75.0%_x000D_
+CHANDRKANT : CHANDRA KANT SINGH
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX6622
+UIDAI Authentication services not reachable or timed out for response
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX0377
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX9423
+ERROR: Txn Already Reversed
+Buyer Name not accpted because of 3 repeatitions of a letter is not allowed
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX1102
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX0696
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX5712
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX9863
+Owner Name not accpted because fuzzy matching result is 33.2% i.e.., less than threshold 75.0%_x000D_
+MAHAVIR SINGH : RAJ KUMAR
+For input string: "K-998"
+Exceeded Maximum OTP generation Limit. Try after 12 Mins
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX3135
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX7017
+Exceeded Maximum OTP generation Limit. Try after 9 Mins
+Exceeded Maximum OTP generation Limit. Try after 8 Mins
+Exceeded Maximum OTP generation Limit. Try after 7 Mins
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX0470
+Aadhaar deactivated due to deceased status.(To re-activate Aadhaar, please visit Aadhaar Centre and update biometrics or approach regional office of UIDAI.)
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX3464
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX3592
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX8617
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX1192
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX9433
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX2980
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX5037
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX3738
+Mobile No. not registered 
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX6170
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX2828
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX7054
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX8556
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX1319
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX7216
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX3153
+Exceeded Maximum OTP generation Limit. Try after 53 Mins
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX0274
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX9910
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX7660
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX7222
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX1746
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX5191
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX0705
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX7153
+PLEASE REGISTER WITH PRIMARY AADHAAR XXXXXXXX0332
+OTP Flooding error.
+Please check Aadhaar Number
+Invalid OTP value.
+Maximum number of attempts for OTP match is exceeded or OTP is not generated.Please generate a fresh OTP and try again.
+INSUFFICIENT STOCK
+The price/MRP must be same as the last two MRP entered by the company.(Plant: RCF Trombay, Product: 15-15-15)
+The price/MRP must be same as the last two MRP entered by the company.(Plant: Mahadhan Agritech Limited Taloja, Product: 20-20-0-13)
+NO RECORD FOUND
+The price/MRP must be same as the last two MRP entered by the company.(Plant: Shiva Global, Product: SSP-Powdered)
+The price/MRP must be same as the last two MRP entered by the company.(Plant: CIL Kakinada, Product: 14-35-14)
+Aadhaar number does not have mobile number.
+The price/MRP must be same as the last two MRP entered by the company.(Plant: CIL Kakinada, Product: 20-20-0-13)
+The price/MRP must be same as the last two MRP entered by the company.(Plant: CIL-Vadodara (Earlier Liberty-Vadodra), Product: SSP-Zincated-Boronated(Granular))
+The price/MRP must be same as the last two MRP entered by the company.(Plant: Shiva Global, Product: SSP-Zincated-Boronated(Granular))
+Your QR code is not active yet
+The price/MRP must be same as the last two MRP entered by the company.(Plant: FACT Cochin, Product: 20-20-0-13)
+Not sure. Pls. check spec.
+Purchased Qty more than Available Limit.
+The price/MRP must be same as the last two MRP entered by the company.(Plant: RCF Thal, Product: Neem Coated Urea(45 Kg))
+The price/MRP must be same as the last two MRP entered by the company.(Plant: Singham Bio-SSP, Product: SSP-Zincated-Boronated(Granular))
+SALE TO RETAILER AND ITs USERS IS NOT ALLOWED
+The price/MRP must be same as the last two MRP entered by the company.(Plant: CIL Vizag, Product: 20-20-0-13)
+The price/MRP must be same as the last two MRP entered by the company.(Plant: RamaPhos-Udaipur, Product: SSP-Zincated(Granular))
+The price/MRP must be same as the last two MRP entered by the company.(Plant: CIL-Nimrani (Earlier Liberty-Nimrani), Product: SSP-Zincated-Boronated(Granular))
+The price/MRP must be same as the last two MRP entered by the company.(Plant: PPL Paradeep, Product: 20-20-0-13)
+For input string: "K-531"
+The price/MRP must be same as the last two MRP entered by the company.(Plant: GSFC Sikka, Product: 20-20-0-13)
+The price/MRP must be same as the last two MRP entered by the company.(Plant: CIL Kakinada, Product: 15-15-15-9)
+Sale to this buyer has been made within a span of 60 minutes
+The price/MRP must be same as the last two MRP entered by the company.(Plant: GSFC Baroda, Product: 20-20-0-13)
+The price/MRP must be same as the last two MRP entered by the company.(Plant: GSFC Baroda, Product: Amm Sulphate)
+The price/MRP must be same as the last two MRP entered by the company.(Plant: Basant-Jalgaon, Product: SSP-Zincated(Powder))
+The price/MRP must be same as the last two MRP entered by the company.(Plant: Shiva Global, Product: SSP-Zincated(Granular))
+The price/MRP must be same as the last two MRP entered by the company.(Plant: Shiva Global, Product: SSP-Granular)
+The price/MRP must be same as the last two MRP entered by the company.(Plant: Rajlaxmi Agro, Product: SSP-G (Mg,Zn, Bo))
+The price/MRP must be same as the last two MRP entered by the company.(Plant: CFCL Import, Product: Imported 10-26-26)
+The price/MRP must be same as the last two MRP entered by the company.(Plant: Basant-Akola, Product: SSP-Zincated-Boronated(Granular))
+The price/MRP must be same as the last two MRP entered by the company.(Plant: RCF Import, Product: Imported 10-26-26)
+The price/MRP must be same as the last two MRP entered by the company.(Plant: KRIBHCO Import, Product: Imported 10-26-26)
+The price/MRP must be same as the last two MRP entered by the company.(Plant: Krishana Phoschem Ltd, Product: SSP-Zincated(Granular))
+The price/MRP must be same as the last two MRP entered by the company.(Plant: Krishana Phoschem Ltd-IND, Product: 20-20-0-13)
+The price/MRP must be same as the last two MRP entered by the company.(Plant: GSFC Import, Product: Imported 10-26-26)
+The price/MRP must be same as the last two MRP entered by the company.(Plant: RMPCL Unit II, Product: SSP-Zincated-Boronated(Granular))
+CONTACT SYSTEM ADMIN
+The price/MRP must be same as the last two MRP entered by the company.(Plant: KRIBHCO Hazira, Product: Neem Coated Urea(45 Kg))
+No valid booking has been received for this QR_code/Aadhaar.
+The price/MRP must be same as the last two MRP entered by the company.(Plant: Basant-Jalgaon, Product: SSP-Zincated(Granular))
+The price/MRP must be same as the last two MRP entered by the company.(Plant: R.M. Phosphates & Chemicals Pvt. Ltd., Product: SSP-Zincated-Boronated(Granular))
+The price/MRP must be same as the last two MRP entered by the company.(Plant: Patel Phoschem, Product: SSP-Zincated(Granular))
+The price/MRP must be same as the last two MRP entered by the company.(Plant: RC Fertilizers, Product: SSP-Zincated-Boronated(Granular))
+The price/MRP must be same as the last two MRP entered by the company.(Plant: Rajlaxmi Agro, Product: SSP-Zincated-Boronated(Granular))
+The price/MRP must be same as the last two MRP entered by the company.(Plant: RC Fertilizers, Product: SSP-Zincated(Powder))
+The price/MRP must be same as the last two MRP entered by the company.(Plant: RC Fertilizers, Product: SSP-Zincated(Granular))
+The price/MRP must be same as the last two MRP entered by the company.(Plant: GSFC Import, Product: Imported Neem Coated Urea(45 Kg))
+MISSING_MOBILE_NO
+The price/MRP must be same as the last two MRP entered by the company.(Plant: RamaPhos-Udaipur, Product: SSP-Zincated-Boronated(Granular))
+The price/MRP must be same as the last two MRP entered by the company.(Plant: IFFCO Kandla, Product: 10-26-26)
+Click on "Forget Pin" and update your pin first
+The price/MRP must be same as the last two MRP entered by the company.(Plant: Rama Phos-Indore, Product: SSP-Powdered)
+The price/MRP must be same as the last two MRP entered by the company.(Plant: Mahadhan Agritech Limited Taloja, Product: NPK 9-24-24 (Mg, Zn, S,B) (40 Kg))
+Invalid wadh element
+The price/MRP must be same as the last two MRP entered by the company.(Plant: KPRCROP KOPPAL, Product: SSP-Granular)
+The price/MRP must be same as the last two MRP entered by the company.(Plant: Mahadhan Agritech Limited Taloja, Product: 24-24-0)
+The price/MRP must be same as the last two MRP entered by the company.(Plant: CIL Import, Product: Imported 10-26-26)
+The price/MRP must be same as the last two MRP entered by the company.(Plant: PPL-Mangalore Import, Product: MOP)
+The price/MRP must be same as the last two MRP entered by the company.(Plant: ZACL-SSP, Product: SSP-Granular)
+The price/MRP must be same as the last two MRP entered by the company.(Plant: PPL-Mangalore, Product: 20-20-0-13)
+The price/MRP must be same as the last two MRP entered by the company.(Plant: Shree Agro Crop Sciences Pvt Ltd FOM, Product: SSP-Zincated-Boronated(Granular))
+The price/MRP must be same as the last two MRP entered by the company.(Plant: CFCL Import, Product: Imported DAP)
+The price/MRP must be same as the last two MRP entered by the company.(Plant: Rama Phos-Indore, Product: SSP-Zincated-Boronated(Granular))
+The price/MRP must be same as the last two MRP entered by the company.(Plant: RIPL FOM, Product: SSP-Zincated-Boronated(Granular))
+The price/MRP must be same as the last two MRP entered by the company.(Plant: AgroPhos Meghnagar, Product: SSP-Zincated(Granular))
+The price/MRP must be same as the last two MRP entered by the company.(Plant: Zuari Import, Product: Imported 15-15-15)
+UNIT can only be (Kg Bags) for product Zinc and Boron NPK 8-21-21 40kg
+The price/MRP must be same as the last two MRP entered by the company.(Plant: RCF Import, Product: Imported DAP)
+The price/MRP must be same as the last two MRP entered by the company.(Plant: ZACL-SSP, Product: SSP-Zincated-Boronated(Granular))
+The price/MRP must be same as the last two MRP entered by the company.(Plant: Mahadhan Agritech Limited Taloja, Product: Zinc and Boron NPK 8-21-21(40 Kg))
+The price/MRP must be same as the last two MRP entered by the company.(Plant: Rajlaxmi Agro, Product: Urea-SSP Complex)
+LATITUDE AND LONGITUDE Already Updated
+The price/MRP must be same as the last two MRP entered by the company.(Plant: RCF Trombay, Product: Neem Coated Urea(45 Kg))
+The price/MRP must be same as the last two MRP entered by the company.(Plant: IPL, Product: Imported 16-16-16)
+The price/MRP must be same as the last two MRP entered by the company.(Plant: KISAN SHAKTI FERTILIZERS and PESTICIDES PVT LTD, Product: SSP-Zincated-Boronated(Granular))
+The price/MRP must be same as the last two MRP entered by the company.(Plant: RC Fertilizers, Product: SSP-Granular)
+The price/MRP must be same as the last two MRP entered by the company.(Plant: Arihant Fert, Product: SSP-Zincated-Boronated(Granular))
+The price/MRP must be same as the last two MRP entered by the company.(Plant: CFCL Gadepan-I, Product: Neem Coated Urea(45 Kg))
+The price/MRP must be same as the last two MRP entered by the company.(Plant: KCFL Dahej, Product: SSP-Granular)
+The price/MRP must be same as the last two MRP entered by the company.(Plant: Green Star, Product: 10-26-26)
+The price/MRP must be same as the last two MRP entered by the company.(Plant: SPIC Tuticorin, Product: Neem Coated Urea(45 Kg))
+The price/MRP must be same as the last two MRP entered by the company.(Plant: Krishana Phoschem Ltd, Product: SSP-Zincated(Powder))
+The price/MRP must be same as the last two MRP entered by the company.(Plant: Rama Phos-Indore, Product: SSP-Zincated(Powder))
+The price/MRP must be same as the last two MRP entered by the company.(Plant: Madhya Bharat Phosphate Private Limited (Unit-2), Product: SSP-Zincated(Granular))
+The price/MRP must be same as the last two MRP entered by the company.(Plant: Singham Bio-SSP, Product: SSP-Zincated(Powder))
+The price/MRP must be same as the last two MRP entered by the company.(Plant: Basant-Jalgaon, Product: SSP-Powdered)
+The price/MRP must be same as the last two MRP entered by the company.(Plant: Madhya Bharat Agro Products Limited - II, Product: SSP-Zincated-Boronated(Granular))
+The price/MRP must be same as the last two MRP entered by the company.(Plant: M/S AARTI FERTILIZERS(A DIV OF AARTI INDS LTD), Product: SSP-Zincated-Boronated(Granular))
+The price/MRP must be same as the last two MRP entered by the company.(Plant: BalajiPhos, Product: SSP-Zincated-Boronated(Granular))
+The price/MRP must be same as the last two MRP entered by the company.(Plant: Madhya Bharat Phosphate Private Limited (Unit-2), Product: SSP-Zincated-Boronated(Granular))
+The price/MRP must be same as the last two MRP entered by the company.(Plant: IFFCO Paradeep, Product: 20-20-0-13)
+The price/MRP must be same as the last two MRP entered by the company.(Plant: Krishana Phoschem Ltd-IND, Product: 15-15-15)
+The price/MRP must be same as the last two MRP entered by the company.(Plant: Nirma, Product: SSP-Granular)
+The price/MRP must be same as the last two MRP entered by the company.(Plant: IFFCO Kalol, Product: Neem Coated Urea(45 Kg))
+The price/MRP must be same as the last two MRP entered by the company.(Plant: KCFL Dahej, Product: SSP-Zincated-Boronated(Granular))
+The price/MRP must be same as the last two MRP entered by the company.(Plant: PPL-Mangalore, Product: Neem Coated Urea(45 Kg))
+The price/MRP must be same as the last two MRP entered by the company.(Plant: Rajlaxmi Agro, Product: SSP-Zincated(Powder))
+The price/MRP must be same as the last two MRP entered by the company.(Plant: GNFC Bharuch, Product: 20-20-0)
+The price/MRP must be same as the last two MRP entered by the company.(Plant: HURL- SINDRI, Product: Neem Coated Urea(45 Kg))
+The price/MRP must be same as the last two MRP entered by the company.(Plant: Basant-Akola, Product: SSP-Zincated(Powder))
+The price/MRP must be same as the last two MRP entered by the company.(Plant: Krishana Phoschem Ltd-IND, Product: 12-32-16)
+The price/MRP must be same as the last two MRP entered by the company.(Plant: Basant-Akola, Product: SSP-Zincated(Granular))
+The price/MRP must be same as the last two MRP entered by the company.(Plant: Rama Phos-Indore, Product: SSP-Zincated(Granular))
+The price/MRP must be same as the last two MRP entered by the company.(Plant: Green Star, Product: 20-20-0-13)
+The price/MRP must be same as the last two MRP entered by the company.(Plant: M/S AARTI FERTILIZERS(A DIV OF AARTI INDS LTD), Product: SSP-Zincated(Granular))

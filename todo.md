@@ -1,0 +1,9 @@
+- [x] Analyze codebase — understand current flow, dataset structure, existing intents
+- [ ] Update NLU (data/nlu.yml) — add search_product_by_district & search_product_near_me intents with rich examples
+- [ ] Update domain.yml — register new intents, entities, slots, actions
+- [ ] Update data/stories.yml — add stories for new search flows
+- [ ] Update data/rules.yml — add rules for new intents
+- [ ] Update actions.py — implement new ActionDistrictSearch & ActionNearMeSearch
+- [ ] Update frontend Chatbot.jsx — auto-detect "near me" / district patterns, route appropriately
+- [ ] Update backend/main.py — add geolocation-aware search endpoint
+- [ ] Verify everything is consistent and complete

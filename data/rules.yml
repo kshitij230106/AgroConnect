@@ -2,62 +2,146 @@ version: "3.1"
 
 rules:
 
-- rule: Greet user
-  steps:
-    - intent: greet
-    - action: action_greet
+  # ── Entry points ────────────────────────────────────────────────────────────
 
-- rule: Say goodbye
-  steps:
-    - intent: goodbye
-    - action: action_goodbye
+  - rule: Greet user
+    steps:
+      - intent: greet
+      - action: action_greet
 
-- rule: Say thanks
-  steps:
-    - intent: thanks
-    - action: action_thanks
+  - rule: Say goodbye
+    steps:
+      - intent: goodbye
+      - action: action_goodbye
 
-- rule: Help user
-  steps:
-    - intent: help
-    - action: action_help
+  - rule: Say thanks
+    steps:
+      - intent: thanks
+      - action: action_thanks
 
-- rule: How are you
-  steps:
-    - intent: ask_how_are_you
-    - action: action_how_are_you
+  - rule: Help user
+    steps:
+      - intent: help
+      - action: action_help
 
-- rule: Handle district input
-  steps:
-    - intent: provide_district
-    - action: action_handle_district
+  - rule: How are you
+    steps:
+      - intent: ask_how_are_you
+      - action: action_how_are_you
 
-- rule: NO at district - user denies district
-  steps:
-    - intent: deny_district
-    - action: action_deny_district
+  # ── Node 1: District ────────────────────────────────────────────────────────
+  #
+  # Fires on provide_district intent regardless of conversation state.
+  # ActionHandleDistrict performs internal validation:
+  #   Valid   → sets district slot, prompts for product (Node 2)
+  #   Invalid → re-prompts district (Node 1), no slot change
 
-- rule: Handle product input
-  steps:
-    - intent: provide_product
-    - action: action_handle_product
+  - rule: Handle district input
+    steps:
+      - intent: provide_district
+      - action: action_handle_district
 
-- rule: NO at product - user denies product
-  steps:
-    - intent: deny_product
-    - action: action_deny_product
+  - rule: User denies at district step
+    steps:
+      - intent: deny_district
+      - action: action_deny_district
 
-- rule: Change district
-  steps:
-    - intent: change_district
-    - action: action_restart_conversation
+  # ── Node 2: Product ─────────────────────────────────────────────────────────
+  #
+  # Fires on provide_product intent regardless of conversation state.
+  # ActionHandleProduct performs internal validation:
+  #   Invalid product  → re-prompts product (Node 2), district preserved
+  #   No stock         → re-prompts product (Node 2), district preserved
+  #   Valid + stock    → displays results (Node 3), sets results_shown=True
 
-- rule: Smart search - district and product together
-  steps:
-    - intent: smart_search
-    - action: action_smart_search
+  - rule: Handle product input
+    steps:
+      - intent: provide_product
+      - action: action_handle_product
 
-- rule: Default fallback
-  steps:
-    - intent: nlu_fallback
-    - action: action_handle_fallback
+  - rule: User denies at product step
+    steps:
+      - intent: deny_product
+      - action: action_deny_product
+
+  # ── Navigation ──────────────────────────────────────────────────────────────
+
+  - rule: Change district — restart Node 1
+    steps:
+      - intent: change_district
+      - action: action_restart_conversation
+
+  # ── Combined-intent flows ────────────────────────────────────────────────────
+
+  - rule: Smart search — Hinglish district + product together
+    steps:
+      - intent: smart_search
+      - action: action_smart_search
+
+  - rule: Search product by explicit district mention
+    steps:
+      - intent: search_product_by_district
+      - action: action_search_product_by_district
+
+  - rule: Search product near GPS location (Flow 2)
+    steps:
+      - intent: search_product_near_me
+      - action: action_search_product_near_me
+
+  # ── Fallback ────────────────────────────────────────────────────────────────
+  #
+  # Fires when NLU confidence is below the threshold in config.yml.
+  #
+  # ActionHandleFallback three-state logic:
+  #   State 1: district = None            → re-prompt Node 1 (no slot change)
+  #   State 2: district set, no results   → re-prompt Node 2 (district preserved)
+  #   State 3: results_shown = True       → "I didn't understand" + FULL RESET
+  #                                         district=None, product=None,
+  #                                         results_shown=False → back to Node 1
+
+  - rule: Default NLU fallback — context-aware re-prompt
+    steps:
+      - intent: nlu_fallback
+      - action: action_handle_fallback
+
+  # ── Technical / error-code intents ──────────────────────────────────────────
+
+  - rule: Handle session timeout
+    steps:
+      - intent: timeout_issue
+      - action: utter_timeout_issue
+
+  - rule: Handle OTP issue
+    steps:
+      - intent: otp_issue
+      - action: utter_otp_issue
+
+  - rule: Handle dealer registration issue
+    steps:
+      - intent: dealer_issue
+      - action: utter_dealer_issue
+
+  - rule: Handle biometric authentication failure
+    steps:
+      - intent: biometric_issue
+      - action: utter_biometric_issue
+
+  - rule: Handle Aadhaar issue
+    steps:
+      - intent: aadhaar_issue
+      - action: utter_aadhaar_issue
+
+  - rule: Handle transaction issue
+    steps:
+      - intent: transaction_issue
+      - action: utter_transaction_issue
+
+  - rule: Handle price or MRP issue
+    steps:
+      - intent: price_issue
+      - action: utter_price_issue
+
+  - rule: Handle stock availability issue
+    steps:
+      - intent: stock_issue
+      - action: utter_stock_issue

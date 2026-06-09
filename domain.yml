@@ -12,39 +12,100 @@ intents:
   - change_district
   - ask_how_are_you
   - smart_search
+  - search_product_by_district
+  - search_product_near_me
+  - timeout_issue
+  - otp_issue
   - nlu_fallback
+  - find_retailer
+  - fertilizer_info
+  - ask_stock
+  - fertilizer_recommendation
+  - dealer_issue
+  - biometric_issue
+  - aadhaar_issue
+  - transaction_issue
+  - price_issue
+  - stock_issue
 
 entities:
   - district
   - product
 
 slots:
+  # Stores the validated, lowercase district name (e.g. "bhadohi").
+  # Set to a value only after ActionHandleDistrict confirms it is valid.
+  # On validation failure, remains None → conversation stays at Node 1.
   district:
     type: text
     mappings:
       - type: custom
+
+  # Stores the canonical product key (e.g. "urea", "dap").
+  # Set only after ActionHandleProduct finds a match with stock.
+  # On validation failure, remains None → conversation stays at Node 2.
   product:
     type: text
     mappings:
       - type: custom
+
+  # Persists the detected language ("en" / "hi" / "ta") across turns.
   language:
     type: text
     mappings:
       - type: custom
 
+  # Tracks whether retailer results have already been shown in this session.
+  # Used by ActionHandleFallback to decide which node to re-prompt:
+  #   False → user is still in district/product collection phase (Node 1 or 2)
+  #   True  → results were displayed (Node 3);
+  #            fallback now RESETS all slots and returns to Node 1
+  results_shown:
+    type: bool
+    initial_value: false
+    mappings:
+      - type: custom
+
+responses:
+  utter_timeout_issue:
+    - text: "Your session has timed out. Please login again and try."
+
+  utter_otp_issue:
+    - text: "There is an OTP-related issue. Please generate a new OTP and try again."
+
+  utter_dealer_issue:
+    - text: "There is a dealer registration issue. Please verify your dealer ID and registration details."
+
+  utter_biometric_issue:
+    - text: "Biometric authentication failed. Please retry your fingerprint or biometric verification."
+
+  utter_aadhaar_issue:
+    - text: "There is an Aadhaar-related issue. Please verify Aadhaar registration and linkage details."
+
+  utter_transaction_issue:
+    - text: "There is a transaction-related issue. Please retry the transaction or check transaction status."
+
+  utter_price_issue:
+    - text: "There is an MRP or price-related issue. Please verify the entered product price."
+
+  utter_stock_issue:
+    - text: "There is a stock availability issue. Please check available inventory before proceeding."
+
 actions:
-  - action_handle_district
-  - action_handle_product
-  - action_handle_fallback
-  - action_restart_conversation
   - action_greet
   - action_goodbye
   - action_thanks
   - action_help
+  - action_how_are_you
   - action_deny_district
   - action_deny_product
-  - action_how_are_you
+  - action_restart_conversation
+  - action_handle_district
+  - action_handle_product
+  - action_handle_fallback
   - action_smart_search
+  - action_search_product_by_district
+  - action_search_product_near_me
 
 session_config:
   session_expiration_time: 60

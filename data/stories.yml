@@ -2,91 +2,257 @@ version: "3.1"
 
 stories:
 
-- story: happy path greet to retailers
-  steps:
-    - intent: greet
-    - action: action_greet
-    - intent: provide_district
-    - action: action_handle_district
-    - intent: provide_product
-    - action: action_handle_product
+  # ── Happy paths ──────────────────────────────────────────────────────────────
 
-- story: direct district then product
-  steps:
-    - intent: provide_district
-    - action: action_handle_district
-    - intent: provide_product
-    - action: action_handle_product
+  - story: happy path — greet, district, product, results
+    steps:
+      - intent: greet
+      - action: action_greet
+      - intent: provide_district
+      - action: action_handle_district
+      - intent: provide_product
+      - action: action_handle_product
 
-- story: smart search direct
-  steps:
-    - intent: smart_search
-    - action: action_smart_search
+  - story: happy path — direct district then product (no greeting)
+    steps:
+      - intent: provide_district
+      - action: action_handle_district
+      - intent: provide_product
+      - action: action_handle_product
 
-- story: NO at district step
-  steps:
-    - intent: greet
-    - action: action_greet
-    - intent: deny_district
-    - action: action_deny_district
+  - story: happy path — smart search (Hinglish, district + product together)
+    steps:
+      - intent: smart_search
+      - action: action_smart_search
 
-- story: NO at product step then change district
-  steps:
-    - intent: provide_district
-    - action: action_handle_district
-    - intent: deny_product
-    - action: action_deny_product
-    - intent: provide_district
-    - action: action_handle_district
-    - intent: provide_product
-    - action: action_handle_product
+  - story: happy path — search product by explicit district
+    steps:
+      - intent: search_product_by_district
+      - action: action_search_product_by_district
 
-- story: fallback at district then retry
-  steps:
-    - intent: greet
-    - action: action_greet
-    - intent: nlu_fallback
-    - action: action_handle_fallback
-    - intent: provide_district
-    - action: action_handle_district
-    - intent: provide_product
-    - action: action_handle_product
+  - story: happy path — search product near GPS location
+    steps:
+      - intent: search_product_near_me
+      - action: action_search_product_near_me
 
-- story: change district mid conversation
-  steps:
-    - intent: provide_district
-    - action: action_handle_district
-    - intent: change_district
-    - action: action_restart_conversation
-    - intent: provide_district
-    - action: action_handle_district
-    - intent: provide_product
-    - action: action_handle_product
+  # ── Node 1 validation: invalid district input ────────────────────────────────
+  #
+  # When gibberish typed at Node 1:
+  #   nlu_fallback → action_handle_fallback → re-prompts Node 1
+  #   district slot stays None; no slot regression
 
-- story: help then search
-  steps:
-    - intent: help
-    - action: action_help
-    - intent: provide_district
-    - action: action_handle_district
-    - intent: provide_product
-    - action: action_handle_product
+  - story: Node 1 — NLU fallback at district step, then valid district
+    steps:
+      - intent: greet
+      - action: action_greet
+      - intent: nlu_fallback
+      - action: action_handle_fallback
+      - intent: provide_district
+      - action: action_handle_district
+      - intent: provide_product
+      - action: action_handle_product
 
-- story: thanks then exit
-  steps:
-    - intent: thanks
-    - action: action_thanks
+  - story: Node 1 — provide_district with invalid value, then valid district
+    steps:
+      - intent: greet
+      - action: action_greet
+      - intent: provide_district
+      - action: action_handle_district
+      - intent: provide_district
+      - action: action_handle_district
+      - intent: provide_product
+      - action: action_handle_product
 
-- story: how are you then search
-  steps:
-    - intent: ask_how_are_you
-    - action: action_how_are_you
-    - intent: provide_district
-    - action: action_handle_district
-    - intent: provide_product
-    - action: action_handle_product
+  - story: Node 1 — multiple invalid districts before valid one
+    steps:
+      - intent: provide_district
+      - action: action_handle_district
+      - intent: provide_district
+      - action: action_handle_district
+      - intent: provide_district
+      - action: action_handle_district
+      - intent: provide_product
+      - action: action_handle_product
 
-- story: goodbye
-  steps:
-    - intent: goodbye
-    - action: action_goodbye
+  # ── Node 2 validation: invalid product input ─────────────────────────────────
+  #
+  # District is set. User types invalid product.
+  # → error shown, district preserved, re-ask product.
+  # User types valid product → results shown.
+
+  - story: Node 2 — NLU fallback at product step, district preserved
+    steps:
+      - intent: provide_district
+      - action: action_handle_district
+      - intent: nlu_fallback
+      - action: action_handle_fallback
+      - intent: provide_product
+      - action: action_handle_product
+
+  - story: Node 2 — provide_product with invalid value, district preserved
+    steps:
+      - intent: provide_district
+      - action: action_handle_district
+      - intent: provide_product
+      - action: action_handle_product
+      - intent: provide_product
+      - action: action_handle_product
+
+  - story: Node 2 — multiple invalid products before valid one, district preserved
+    steps:
+      - intent: provide_district
+      - action: action_handle_district
+      - intent: provide_product
+      - action: action_handle_product
+      - intent: provide_product
+      - action: action_handle_product
+      - intent: provide_product
+      - action: action_handle_product
+
+  - story: Node 2 — fallback then fallback then valid product
+    steps:
+      - intent: provide_district
+      - action: action_handle_district
+      - intent: nlu_fallback
+      - action: action_handle_fallback
+      - intent: nlu_fallback
+      - action: action_handle_fallback
+      - intent: provide_product
+      - action: action_handle_product
+
+  # ── Node 3 validation: garbage after results → FULL RESET to Node 1 ──────────
+  #
+  # Results were shown (results_shown=True).
+  # User types garbage → fallback fires → ALL slots cleared → re-prompt Node 1.
+  # This is the key change from the original code.
+
+  - story: Node 3 — NLU fallback after results → full reset to Node 1
+    steps:
+      - intent: provide_district
+      - action: action_handle_district
+      - intent: provide_product
+      - action: action_handle_product
+      - intent: nlu_fallback
+      - action: action_handle_fallback
+      - intent: provide_district
+      - action: action_handle_district
+      - intent: provide_product
+      - action: action_handle_product
+
+  - story: Node 3 — multiple garbage after results → keeps resetting to Node 1
+    steps:
+      - intent: provide_district
+      - action: action_handle_district
+      - intent: provide_product
+      - action: action_handle_product
+      - intent: nlu_fallback
+      - action: action_handle_fallback
+      - intent: nlu_fallback
+      - action: action_handle_fallback
+      - intent: provide_district
+      - action: action_handle_district
+      - intent: provide_product
+      - action: action_handle_product
+
+  # ── Post-result (Node 3) — valid follow-up actions ───────────────────────────
+
+  - story: After results — search another product in same district
+    steps:
+      - intent: provide_district
+      - action: action_handle_district
+      - intent: provide_product
+      - action: action_handle_product
+      - intent: provide_product
+      - action: action_handle_product
+
+  - story: After results — change district and search again
+    steps:
+      - intent: provide_district
+      - action: action_handle_district
+      - intent: provide_product
+      - action: action_handle_product
+      - intent: change_district
+      - action: action_restart_conversation
+      - intent: provide_district
+      - action: action_handle_district
+      - intent: provide_product
+      - action: action_handle_product
+
+  # ── Denial flows ─────────────────────────────────────────────────────────────
+
+  - story: Deny at district step — exit
+    steps:
+      - intent: greet
+      - action: action_greet
+      - intent: deny_district
+      - action: action_deny_district
+
+  - story: Deny at product step — re-enter district
+    steps:
+      - intent: provide_district
+      - action: action_handle_district
+      - intent: deny_product
+      - action: action_deny_product
+      - intent: provide_district
+      - action: action_handle_district
+      - intent: provide_product
+      - action: action_handle_product
+
+  # ── Change district mid-conversation ─────────────────────────────────────────
+
+  - story: Change district while at Node 2
+    steps:
+      - intent: provide_district
+      - action: action_handle_district
+      - intent: change_district
+      - action: action_restart_conversation
+      - intent: provide_district
+      - action: action_handle_district
+      - intent: provide_product
+      - action: action_handle_product
+
+  # ── Combined flows ────────────────────────────────────────────────────────────
+
+  - story: search_product_by_district then another product
+    steps:
+      - intent: search_product_by_district
+      - action: action_search_product_by_district
+      - intent: provide_product
+      - action: action_handle_product
+
+  - story: search near me then another product
+    steps:
+      - intent: search_product_near_me
+      - action: action_search_product_near_me
+      - intent: provide_product
+      - action: action_handle_product
+
+  # ── Utility flows ─────────────────────────────────────────────────────────────
+
+  - story: help then full search
+    steps:
+      - intent: help
+      - action: action_help
+      - intent: provide_district
+      - action: action_handle_district
+      - intent: provide_product
+      - action: action_handle_product
+
+  - story: how are you then full search
+    steps:
+      - intent: ask_how_are_you
+      - action: action_how_are_you
+      - intent: provide_district
+      - action: action_handle_district
+      - intent: provide_product
+      - action: action_handle_product
+
+  - story: thanks then exit
+    steps:
+      - intent: thanks
+      - action: action_thanks
+
+  - story: goodbye
+    steps:
+      - intent: goodbye
+      - action: action_goodbye

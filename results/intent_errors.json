@@ -1,0 +1,42 @@
+[
+  {
+    "text": "मुझे डीएपी चाहिए",
+    "intent": "provide_product",
+    "intent_prediction": {
+      "name": "smart_search",
+      "confidence": 0.48639750480651855
+    }
+  },
+  {
+    "text": "यूरिया कहाँ मिलेगा",
+    "intent": "smart_search",
+    "intent_prediction": {
+      "name": "provide_product",
+      "confidence": 0.5596877336502075
+    }
+  },
+  {
+    "text": "डीएपी कहाँ मिलेगा",
+    "intent": "smart_search",
+    "intent_prediction": {
+      "name": "provide_product",
+      "confidence": 0.4991884231567383
+    }
+  },
+  {
+    "text": "मुझे यूरिया चाहिए",
+    "intent": "smart_search",
+    "intent_prediction": {
+      "name": "provide_product",
+      "confidence": 0.6070245504379272
+    }
+  },
+  {
+    "text": "खाद कहाँ मिलेगी",
+    "intent": "smart_search",
+    "intent_prediction": {
+      "name": "provide_product",
+      "confidence": 0.6545121073722839
+    }
+  }
+]
